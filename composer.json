@@ -1,0 +1,36 @@
+{
+	"name": "jeroen/wikibase-data-fixtures",
+	"type": "library",
+	"description": "Fixtures for Wikibase data that can be used in tests or examples",
+	"keywords": [
+		"Wikibase",
+		"Fixtures"
+	],
+	"homepage": "https://github.com/JeroenDeDauw/WikibaseDataFixtures",
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Jeroen De Dauw",
+			"email": "jeroendedauw@gmail.com",
+			"homepage": "http://jeroendedauw.com",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"irc": "irc://irc.freenode.net/wikidata"
+	},
+	"require": {
+		"php": ">=5.4.0",
+		"wikibase/data-model": "~1.0@dev"
+	},
+	"autoload": {
+		"psr-4": {
+			"Wikibase\\DataFixtures\\": "src/"
+		}
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "0.1.x-dev"
+		}
+	}
+}
