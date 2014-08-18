@@ -3,6 +3,7 @@
 namespace Wikibase\DataFixtures\Items;
 
 use Wikibase\DataFixtures\Properties\CountryProperty;
+use Wikibase\DataFixtures\Properties\InstanceOfProperty;
 use Wikibase\DataModel\Claim\ClaimList;
 use Wikibase\DataModel\Claim\Claims;
 use Wikibase\DataModel\Entity\EntityIdValue;
@@ -23,13 +24,25 @@ class Berlin {
 	private $germany;
 
 	/**
+	 * @var City
+	 */
+	private $city;
+
+	/**
 	 * @var CountryProperty
 	 */
 	private $country;
 
+	/**
+	 * @var InstanceOfProperty
+	 */
+	private $instanceOf;
+
 	public function __construct() {
 		$this->germany = new Germany();
 		$this->country = new CountryProperty();
+		$this->city = new City();
+		$this->instanceOf = new InstanceOfProperty();
 	}
 
 	public function newFingerprint() {
@@ -67,6 +80,15 @@ class Berlin {
 			'kittens'
 		);
 
+		$statements->addNewClaim(
+			new PropertyValueSnak(
+				$this->instanceOf->newPropertyId(),
+				new EntityIdValue( $this->city->newItemId() )
+			),
+			null,
+			'kittens'
+		);
+
 		return $statements;
 	}
 
@@ -75,7 +97,8 @@ class Berlin {
 	 */
 	public function getItemDependencies() {
 		return [
-			$this->germany->newItem()
+			$this->germany->newItem(),
+			$this->city->newItem()
 		];
 	}
 
@@ -84,7 +107,8 @@ class Berlin {
 	 */
 	public function getPropertyDependencies() {
 		return [
-			$this->country->newProperty()
+			$this->country->newProperty(),
+			$this->instanceOf->newProperty()
 		];
 	}
 

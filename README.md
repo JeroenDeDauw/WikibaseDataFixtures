@@ -30,6 +30,15 @@ Wikibase DataFixtures 1.0:
 }
 ```
 
+## Compatibility
+
+PHP 5.4 and above are supported.
+
+Generally existing data will not be modified. If it is, the release notes will definitely mention
+it, and the version number will be incremented appropriately. Changes to this library will come
+mainly in the form of additions, not as changes or removals. If an `Item` has a particular
+`Statement`, it will keep having it, even though additional statements might be added.
+
 ## Running the tests
 
 Running the tests
@@ -41,7 +50,7 @@ Running the tests
 ### Version 0.2 (2014-08-19)
 
 * Renamed `Country` to `CountryProperty`
-* Added `InstanceOfProperty` and `State`
+* Added `InstanceOfProperty`, `City` and `State`
 
 ### Version 0.1 (2014-08-17)
 
