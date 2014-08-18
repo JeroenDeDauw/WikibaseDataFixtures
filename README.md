@@ -2,7 +2,6 @@
 
 [![Build Status](https://secure.travis-ci.org/JeroenDeDauw/WikibaseDataFixtures.png?branch=master)](http://travis-ci.org/JeroenDeDauw/WikibaseDataFixtures)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/JeroenDeDauw/WikibaseDataFixtures/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/JeroenDeDauw/WikibaseDataFixtures/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/JeroenDeDauw/WikibaseDataFixtures/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/JeroenDeDauw/WikibaseDataFixtures/?branch=master)
 [![Dependency Status](https://www.versioneye.com/php/jeroen:wikibase-data-fixtures/badge.png)](https://www.versioneye.com/php/jeroen:wikibase-data-fixtures)
 [![Download count](https://poser.pugx.org/jeroen/wikibase-data-fixtures/d/total.png)](https://packagist.org/packages/jeroen/wikibase-data-fixtures)
 [![License](https://poser.pugx.org/jeroen/wikibase-data-fixtures/license.svg)](https://packagist.org/packages/jeroen/wikibase-data-fixtures)
@@ -38,6 +37,11 @@ Running the tests
     phpunit
 
 ## Release notes
+
+### Version 0.2 (2014-08-19)
+
+* Renamed `Country` to `CountryProperty`
+* Added `InstanceOfProperty` and `State`
 
 ### Version 0.1 (2014-08-17)
 

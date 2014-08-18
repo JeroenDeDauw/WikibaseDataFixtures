@@ -10,7 +10,7 @@ use Wikibase\DataModel\Term\Fingerprint;
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class Country {
+class CountryProperty {
 
 	public function newFingerprint() {
 		$fingerprint = Fingerprint::newEmpty();
@@ -26,7 +26,7 @@ class Country {
 	}
 
 	public function newProperty() {
-		$property = Property::newFromType( 'kittens' );
+		$property = Property::newFromType( 'wikibase-item' );
 		$property->setId( $this->newPropertyId() );
 
 		$property->setFingerprint( $this->newFingerprint() );

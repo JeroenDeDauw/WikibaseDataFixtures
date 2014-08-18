@@ -2,7 +2,7 @@
 
 namespace Wikibase\DataFixtures\Items;
 
-use Wikibase\DataFixtures\Properties\Country;
+use Wikibase\DataFixtures\Properties\CountryProperty;
 use Wikibase\DataModel\Claim\ClaimList;
 use Wikibase\DataModel\Claim\Claims;
 use Wikibase\DataModel\Entity\EntityIdValue;
@@ -23,13 +23,13 @@ class Berlin {
 	private $germany;
 
 	/**
-	 * @var Country
+	 * @var CountryProperty
 	 */
 	private $country;
 
 	public function __construct() {
 		$this->germany = new Germany();
-		$this->country = new Country();
+		$this->country = new CountryProperty();
 	}
 
 	public function newFingerprint() {
