@@ -77,7 +77,7 @@ class Berlin {
 				new EntityIdValue( $this->germany->newItemId() )
 			),
 			null,
-			'kittens'
+			'first guid'
 		);
 
 		$statements->addNewClaim(
@@ -86,7 +86,7 @@ class Berlin {
 				new EntityIdValue( $this->city->newItemId() )
 			),
 			null,
-			'kittens'
+			'second guid'
 		);
 
 		return $statements;
