@@ -47,6 +47,10 @@ Running the tests
 
 ## Release notes
 
+### Version 0.2.1 (2014-08-27)
+
+* Added compatibility with latest Wikibase DataModel changes
+
 ### Version 0.2 (2014-08-19)
 
 * Renamed `Country` to `CountryProperty`
