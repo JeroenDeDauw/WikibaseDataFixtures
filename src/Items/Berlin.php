@@ -2,8 +2,10 @@
 
 namespace Wikibase\DataFixtures\Items;
 
+use DataValues\StringValue;
 use Wikibase\DataFixtures\Properties\CountryProperty;
 use Wikibase\DataFixtures\Properties\InstanceOfProperty;
+use Wikibase\DataFixtures\Properties\PostalCodeProperty;
 use Wikibase\DataModel\Entity\EntityIdValue;
 use Wikibase\DataModel\Entity\Item;
 use Wikibase\DataModel\Entity\Property;
@@ -37,11 +39,18 @@ class Berlin {
 	 */
 	private $instanceOf;
 
+	/**
+	 * @var PostalCodeProperty
+	 */
+	private $postCode;
+
 	public function __construct() {
 		$this->germany = new Germany();
-		$this->country = new CountryProperty();
 		$this->city = new City();
+
+		$this->country = new CountryProperty();
 		$this->instanceOf = new InstanceOfProperty();
+		$this->postCode = new PostalCodeProperty();
 	}
 
 	public function newFingerprint() {
@@ -88,6 +97,16 @@ class Berlin {
 			null,
 			null,
 			'second guid'
+		);
+
+		$statements->addNewStatement(
+			new PropertyValueSnak(
+				$this->postCode->newPropertyId(),
+				new StringValue( '10115–14199' )
+			),
+			null,
+			null,
+			'third guid'
 		);
 
 		return $statements;

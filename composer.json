@@ -21,7 +21,7 @@
 	},
 	"require": {
 		"php": ">=5.4.0",
-		"wikibase/data-model": "~1.0@dev"
+		"wikibase/data-model": "~1.0"
 	},
 	"autoload": {
 		"psr-4": {

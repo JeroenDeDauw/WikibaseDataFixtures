@@ -47,6 +47,12 @@ Running the tests
 
 ## Release notes
 
+### Version 0.2.2 (2014-09-11)
+
+* Use only stable versions of DataModel 1.x
+* Added `PostalCodeProperty`
+* Added postal code to `Berlin`
+
 ### Version 0.2.1 (2014-08-27)
 
 * Added compatibility with latest Wikibase DataModel changes
