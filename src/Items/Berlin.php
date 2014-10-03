@@ -9,6 +9,7 @@ use Wikibase\DataFixtures\Properties\PostalCodeProperty;
 use Wikibase\DataModel\Entity\EntityIdValue;
 use Wikibase\DataModel\Entity\Item;
 use Wikibase\DataModel\Entity\Property;
+use Wikibase\DataModel\SiteLinkList;
 use Wikibase\DataModel\Snak\PropertyValueSnak;
 use Wikibase\DataModel\Statement\StatementList;
 use Wikibase\DataModel\Term\Fingerprint;
@@ -53,6 +54,17 @@ class Berlin {
 		$this->postCode = new PostalCodeProperty();
 	}
 
+	public function newItem() {
+		$item = Item::newEmpty();
+		$item->setId( 64 );
+
+		$item->setFingerprint( $this->newFingerprint() );
+		$item->setStatements( $this->newStatements() );
+		$item->setSiteLinkList( $this->newSiteLinkList() );
+
+		return $item;
+	}
+
 	public function newFingerprint() {
 		$fingerprint = Fingerprint::newEmpty();
 
@@ -66,14 +78,13 @@ class Berlin {
 		return $fingerprint;
 	}
 
-	public function newItem() {
-		$item = Item::newEmpty();
-		$item->setId( 64 );
+	public function newSiteLinkList() {
+		$links = new SiteLinkList();
 
-		$item->setFingerprint( $this->newFingerprint() );
-		$item->setStatements( $this->newStatements() );
+		$links->addNewSiteLink( 'enwiki', 'Berlin' );
+		$links->addNewSiteLink( 'nlwiki', 'Berlijn' );
 
-		return $item;
+		return $links;
 	}
 
 	public function newStatements() {
