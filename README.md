@@ -47,6 +47,10 @@ Running the tests
 
 ## Release notes
 
+### Version 0.2.4 (2014-10-21)
+
+* Allow installation together with DataModel 2.x
+
 ### Version 0.2.3 (2014-10-03)
 
 * Added sitelinks to the Berlin item
