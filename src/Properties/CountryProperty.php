@@ -13,7 +13,7 @@ use Wikibase\DataModel\Term\Fingerprint;
 class CountryProperty {
 
 	public function newFingerprint() {
-		$fingerprint = Fingerprint::newEmpty();
+		$fingerprint = new Fingerprint();
 
 		$fingerprint->setLabel( 'en', 'country' );
 		$fingerprint->setLabel( 'de', 'Staat' );

@@ -13,7 +13,7 @@ use Wikibase\DataModel\Term\Fingerprint;
 class PostalCodeProperty {
 
 	public function newFingerprint() {
-		$fingerprint = Fingerprint::newEmpty();
+		$fingerprint = new Fingerprint();
 
 		$fingerprint->setLabel( 'en', 'postal code' );
 		$fingerprint->setAliasGroup( 'en', [ 'zip code', 'post code' ] );

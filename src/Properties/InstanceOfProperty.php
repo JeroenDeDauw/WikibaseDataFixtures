@@ -13,7 +13,7 @@ use Wikibase\DataModel\Term\Fingerprint;
 class InstanceOfProperty {
 
 	public function newFingerprint() {
-		$fingerprint = Fingerprint::newEmpty();
+		$fingerprint = new Fingerprint();
 
 		$fingerprint->setLabel( 'en', 'instance of' );
 		$fingerprint->setLabel( 'de', 'ist ein(e)' );

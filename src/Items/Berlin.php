@@ -8,6 +8,7 @@ use Wikibase\DataFixtures\Properties\InstanceOfProperty;
 use Wikibase\DataFixtures\Properties\PostalCodeProperty;
 use Wikibase\DataModel\Entity\EntityIdValue;
 use Wikibase\DataModel\Entity\Item;
+use Wikibase\DataModel\Entity\ItemId;
 use Wikibase\DataModel\Entity\Property;
 use Wikibase\DataModel\SiteLinkList;
 use Wikibase\DataModel\Snak\PropertyValueSnak;
@@ -55,8 +56,7 @@ class Berlin {
 	}
 
 	public function newItem() {
-		$item = Item::newEmpty();
-		$item->setId( 64 );
+		$item = new Item( new ItemId( 'Q64' ) );
 
 		$item->setFingerprint( $this->newFingerprint() );
 		$item->setStatements( $this->newStatements() );
@@ -66,7 +66,7 @@ class Berlin {
 	}
 
 	public function newFingerprint() {
-		$fingerprint = Fingerprint::newEmpty();
+		$fingerprint = new Fingerprint();
 
 		$fingerprint->setLabel( 'en', 'Berlin' );
 		$fingerprint->setLabel( 'de', 'Berlin' );

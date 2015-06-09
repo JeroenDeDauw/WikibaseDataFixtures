@@ -13,7 +13,7 @@ use Wikibase\DataModel\Term\Fingerprint;
 class State {
 
 	public function newFingerprint() {
-		$fingerprint = Fingerprint::newEmpty();
+		$fingerprint = new Fingerprint();
 
 		$fingerprint->setLabel( 'en', 'state' );
 		$fingerprint->setLabel( 'de', 'Staat' );
@@ -25,7 +25,7 @@ class State {
 	}
 
 	public function newItem() {
-		$item = Item::newEmpty();
+		$item = new Item();
 		$item->setId( $this->newItemId() );
 
 		$item->setFingerprint( $this->newFingerprint() );
