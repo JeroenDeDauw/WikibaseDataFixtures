@@ -47,9 +47,14 @@ Running the tests
 
 ## Release notes
 
+### Version 1.0.0 (2015-11-03)
+
+* Allow installation together with Wikibase DataModel 4.x
+* Allow installation together with Wikibase DataModel 3.x
+
 ### Version 0.2.4 (2014-10-21)
 
-* Allow installation together with DataModel 2.x
+* Allow installation together with Wikibase DataModel 2.x
 
 ### Version 0.2.3 (2014-10-03)
 
@@ -57,7 +62,7 @@ Running the tests
 
 ### Version 0.2.2 (2014-09-11)
 
-* Use only stable versions of DataModel 1.x
+* Use only stable versions of Wikibase DataModel 1.x
 * Added `PostalCodeProperty`
 * Added postal code to `Berlin`
 
