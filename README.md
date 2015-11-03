@@ -9,7 +9,7 @@
 [![Latest Stable Version](https://poser.pugx.org/jeroen/wikibase-data-fixtures/version.png)](https://packagist.org/packages/jeroen/wikibase-data-fixtures)
 [![Latest Unstable Version](https://poser.pugx.org/jeroen/wikibase-data-fixtures/v/unstable.svg)](//packagist.org/packages/jeroen/wikibase-data-fixtures)
 
-**Wikibase DataFixtures** contains Wikibase data meant for use in tests and examples.
+**Wikibase DataFixtures** contains [Wikibase](http://wikiba.se/) data meant for use in tests and examples.
 
 ## Installation
 
