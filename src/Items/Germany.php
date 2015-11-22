@@ -30,8 +30,7 @@ class Germany {
 	}
 
 	public function newItem() {
-		$item = new Item();
-		$item->setId( $this->newItemId() );
+		$item = new Item( $this->newItemId() );
 
 		$item->setFingerprint( $this->newFingerprint() );
 		$item->setStatements( $this->newStatements() );

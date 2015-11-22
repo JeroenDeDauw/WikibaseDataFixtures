@@ -47,6 +47,10 @@ Running the tests
 
 ## Release notes
 
+### Version 1.1.0 (2015-11-22)
+
+* Added items `Wikidata`, `WikimediaProject`, `OnlineDatabase` and `KnowledgeBase`.
+
 ### Version 1.0.0 (2015-11-03)
 
 * Allow installation together with Wikibase DataModel 4.x

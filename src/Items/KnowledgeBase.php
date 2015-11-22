@@ -7,19 +7,22 @@ use Wikibase\DataModel\Entity\ItemId;
 use Wikibase\DataModel\Term\Fingerprint;
 
 /**
+ * @since 1.1.0
  * @licence GNU GPL v2+
  * @author Jeroen De Dauw < jeroendedauw@gmail.com >
  */
-class State {
+class KnowledgeBase {
 
 	public function newFingerprint() {
 		$fingerprint = new Fingerprint();
 
-		$fingerprint->setLabel( 'en', 'state' );
-		$fingerprint->setLabel( 'de', 'Staat' );
+		$fingerprint->setLabel( 'en', 'knowledge base' );
+		$fingerprint->setLabel( 'de', 'Wissensdatenbank' );
+		$fingerprint->setLabel( 'fr', 'base de connaissance' );
 
-		$fingerprint->setDescription( 'en', 'organised community living under a system of government; either a sovereign state, constituent state, or federated state' );
-		$fingerprint->setDescription( 'de', 'mehrdeutiger Begriff verschiedener Sozial- und Staatswissenschaften' );
+		$fingerprint->setAliasGroup( 'de', [ 'Knowledgebase', 'Wissensbasis', 'Wissensbank', 'Knowledge Base' ] );
+
+		$fingerprint->setDescription( 'en', 'information repository with multiple applications' );
 
 		return $fingerprint;
 	}
@@ -33,7 +36,7 @@ class State {
 	}
 
 	public function newItemId() {
-		return new ItemId( 'Q7275' );
+		return new ItemId( 'Q593744' );
 	}
 
 }
