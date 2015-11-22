@@ -12,7 +12,7 @@ use Wikibase\DataFixtures\Items\State;
  */
 class ItemConstructionTest extends \PHPUnit_Framework_TestCase {
 
-	public function testCanConstructBerlinItem() {
+	public function testCanConstructItems() {
 		$this->assertInstanceOf( 'Wikibase\DataModel\Entity\Item', ( new Berlin() )->newItem() );
 		$this->assertInstanceOf( 'Wikibase\DataModel\Entity\Item', ( new Germany() )->newItem() );
 		$this->assertInstanceOf( 'Wikibase\DataModel\Entity\Item', ( new State() )->newItem() );
