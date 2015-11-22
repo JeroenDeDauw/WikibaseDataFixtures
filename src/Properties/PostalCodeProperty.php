@@ -23,12 +23,11 @@ class PostalCodeProperty {
 	}
 
 	public function newProperty() {
-		$property = Property::newFromType( 'string' );
-		$property->setId( $this->newPropertyId() );
-
-		$property->setFingerprint( $this->newFingerprint() );
-
-		return $property;
+		return new Property(
+			$this->newPropertyId(),
+			$this->newFingerprint(),
+			'string'
+		);
 	}
 
 	public function newPropertyId() {

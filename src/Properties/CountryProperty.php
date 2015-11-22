@@ -26,12 +26,11 @@ class CountryProperty {
 	}
 
 	public function newProperty() {
-		$property = Property::newFromType( 'wikibase-item' );
-		$property->setId( $this->newPropertyId() );
-
-		$property->setFingerprint( $this->newFingerprint() );
-
-		return $property;
+		return new Property(
+			$this->newPropertyId(),
+			$this->newFingerprint(),
+			'wikibase-item'
+		);
 	}
 
 	public function newPropertyId() {
