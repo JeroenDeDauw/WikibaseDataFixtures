@@ -32,7 +32,7 @@ Wikibase DataFixtures 1.0:
 
 ## Compatibility
 
-PHP 5.4 and above are supported.
+PHP 5.5 and above are supported.
 
 Generally existing data will not be modified. If it is, the release notes will definitely mention
 it, and the version number will be incremented appropriately. Changes to this library will come
@@ -46,6 +46,12 @@ Running the tests
     phpunit
 
 ## Release notes
+
+### Version 1.2.0 (2017-02-28)
+
+* Allow installation together with Wikibase DataModel 6.x
+* Allow installation together with Wikibase DataModel 5.x
+* Dropped support for PHP 5.4
 
 ### Version 1.1.0 (2015-11-22)
 
